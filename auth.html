@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="styles/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="light">
+    <div id="auth_div">
+        <div id="logo">
+            <img src="images/logo.png" alt="Логотип" />
+        </div>
+
+        <form id="auth_form" action="index.html">
+            <h2>Авторизация</h2>
+            <label for="login">Логин:</label>
+            <input class="text" id="login" placeholder="Введите логин" required pattern="^[а-яА-ЯёЁ0-9]{4,10}$" title="Логин должен содержать от 4 до 10 символов: только русские буквы и цифры">
+            
+            <label for="date">Дата рождения:</label> 
+            <input class="date" id="date" placeholder="Дата рождения" type="date" min="1950-01-01" required>
+            
+            <label>Пол:</label>
+            <div>
+                <input type="radio" id="male" value="male" checked name="gender">
+                <label for="male">Мужской</label>
+                <input type="radio" id="female" value="female" name="gender">
+                <label for="female">Женский</label>
+            </div>
+            
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+    <script src="scripts/auth.js"></script>
+</body>
+
+</html>
