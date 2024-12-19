@@ -42,12 +42,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     score++;
                 } else {
                     feedbackElement.textContent = `Ответ неправильный, правильный ответ: ${correctAnswers[question]}`;
-                    feedbackElement.style.color = 'red';
+                    feedbackElement.style.color = '#ff7777';
                 }
             } else {
                 
                 feedbackElement.textContent = `Ответ неправильный, правильный ответ: ${correctAnswers[question]}`;
-                feedbackElement.style.color = 'red';
+                feedbackElement.style.color = '#ff7777';
             }
         }
 
