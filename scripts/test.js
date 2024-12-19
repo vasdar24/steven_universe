@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (userAnswer) {
                 if (userAnswer.toLowerCase() === correctAnswers[question].toLowerCase()) {
                     feedbackElement.textContent = 'Ответ правильный!';
-                    feedbackElement.style.color = 'green';
+                    feedbackElement.style.color = '#2ecc71';
                     score++;
                 } else {
                     feedbackElement.textContent = `Ответ неправильный, правильный ответ: ${correctAnswers[question]}`;
