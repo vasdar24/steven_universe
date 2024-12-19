@@ -155,7 +155,7 @@ body {
 }
 
 .test-form .feedback.correct {
-    color: #acecc7;
+    color: #3e3;
 }
 
 .test-form .feedback.incorrect {
@@ -218,7 +218,7 @@ body {
     font-size: 30px;
 }
 
-/* Мобильные стили */
+
 @media (max-width: 768px) {
     .menu-container {
         width: 100%;
