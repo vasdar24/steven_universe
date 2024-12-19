@@ -125,7 +125,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Стиль для теста */
+
 .test-form {
     background-color: rgba(56, 86, 108, 0.9);
     padding: 20px;
@@ -155,7 +155,7 @@ body {
 }
 
 .test-form .feedback.correct {
-    color: #9ee9be;
+    color: #90e6b4;
 }
 
 .test-form .feedback.incorrect {
@@ -177,7 +177,7 @@ body {
     background-color: #3498db;
 }
 
-/* Стиль для футера */
+
 .footer {
     background-color: rgba(56, 86, 108, 0.9);
     color: azure;
