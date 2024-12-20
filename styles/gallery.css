@@ -13,13 +13,13 @@ body {
 }
 .menu a.logout {
     background-color: #9b9ab6; 
-    color: white; 
-    padding: 10px 20px;
+    color: white;
+    padding: 10px 20px; 
     font-size: 18px; 
-    font-weight: 500; 
+    font-weight: 500;
     border-radius: 10px; 
     display: inline-block; 
-    text-align: center; 
+    text-align: center;
     text-decoration: none; 
     transition: background-color 0.3s ease, transform 0.2s; 
 }
@@ -31,6 +31,8 @@ body {
 .menu a.logout:active {
     transform: scale(0.98); 
 }
+
+
 
 .menu-container {
     padding: 10px 0;
@@ -185,69 +187,23 @@ body {
         max-width: 200px;
         margin: 10px auto;
     }
-    .gallery-container {
-        width: 90%;
-    }
-
-    .gallery-prev, .gallery-next {
-        font-size: 24px;
-        padding: 8px;
-    }
-
-    .gallery-caption {
-        font-size: 14px;
-    }
 }
-.gallery-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 20px;
-    
-}
-
 .gallery-container {
     position: relative;
     width: 100%;
-    max-width: 960px;
+    max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.gallery-slides {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.gallery-slide {
-    width: 100%;
-    max-width: 1920px;
-    height: auto;
-    display: none;
-    text-align: center; 
-}
-
-.gallery-slide.active {
-    display: block;
-}
-
-.gallery-caption {
-    margin-top: 10px;
-    color: #d1d1d1;
-    font-size: 16px;
-    font-weight: 500;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.gallery-prev, .gallery-next {
+.gallery-prev,
+.gallery-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
     font-size: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -262,4 +218,24 @@ body {
     right: 10px;
 }
 
+.gallery-prev:disabled,
+.gallery-next:disabled {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
 
+.gallery-slides {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.gallery-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery-caption {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
