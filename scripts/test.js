@@ -38,16 +38,28 @@ document.addEventListener("DOMContentLoaded", function() {
             if (userAnswer) {
                 if (userAnswer.toLowerCase() === correctAnswers[question].toLowerCase()) {
                     feedbackElement.textContent = 'Ответ правильный!';
+<<<<<<< HEAD
+                    feedbackElement.style.color =' #2ecc71';
+                    score++;
+                } else {
+                    feedbackElement.textContent = `Ответ неправильный, правильный ответ: ${correctAnswers[question]}`;
+                    feedbackElement.style.color = '#ff6666';
+=======
                     feedbackElement.style.color = '#2ecc71';
                     score++;
                 } else {
                     feedbackElement.textContent = `Ответ неправильный, правильный ответ: ${correctAnswers[question]}`;
                     feedbackElement.style.color = '#ff7777';
+>>>>>>> 9d39c44e71b9171c1510437108a6326dc918879e
                 }
             } else {
                 
                 feedbackElement.textContent = `Ответ неправильный, правильный ответ: ${correctAnswers[question]}`;
+<<<<<<< HEAD
+                feedbackElement.style.color = '#ff6666';
+=======
                 feedbackElement.style.color = '#ff7777';
+>>>>>>> 9d39c44e71b9171c1510437108a6326dc918879e
             }
         }
 
