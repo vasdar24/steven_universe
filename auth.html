@@ -15,11 +15,14 @@
 
         <form id="auth_form" action="index.html">
             <h2>Авторизация</h2>
+
             <label for="login">Логин:</label>
-            <input class="text" id="login" placeholder="Введите логин" required pattern="^[а-яА-ЯёЁ0-9]{4,10}$" title="Логин должен содержать от 4 до 10 символов: только русские буквы и цифры">
+            <input class="text" id="login" placeholder="Введите логин">
+            <p id="login-error" class="error-message"></p> 
             
             <label for="date">Дата рождения:</label> 
-            <input class="date" id="date" placeholder="Дата рождения" type="date" min="1950-01-01" required>
+            <input class="date" id="date" placeholder="Дата рождения" type="date">
+            <p id="date-error" class="error-message"></p> 
             
             <label>Пол:</label>
             <div>
@@ -28,11 +31,11 @@
                 <input type="radio" id="female" value="female" name="gender">
                 <label for="female">Женский</label>
             </div>
+            <p id="gender-error" class="error-message"></p> 
             
             <button type="submit">Войти</button>
         </form>
     </div>
     <script src="scripts/auth.js"></script>
 </body>
-
 </html>
