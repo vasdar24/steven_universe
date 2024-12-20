@@ -38,15 +38,16 @@ document.addEventListener("DOMContentLoaded", function() {
             if (userAnswer) {
                 if (userAnswer.toLowerCase() === correctAnswers[question].toLowerCase()) {
                     feedbackElement.textContent = 'Ответ правильный!';
-                    feedbackElement.style.color = '#2ecc71';  
+                    feedbackElement.style.color = '#2ecc71';
                     score++;
                 } else {
                     feedbackElement.textContent = `Ответ неправильный, правильный ответ: ${correctAnswers[question]}`;
-                    feedbackElement.style.color = '#ff6666';  
+                    feedbackElement.style.color = '#ff7777';
                 }
             } else {
-                feedbackElement.textContent = `Вы не ответили на вопрос. Правильный ответ: ${correctAnswers[question]}`;
-                feedbackElement.style.color = '#ff6666';  
+                
+                feedbackElement.textContent = `Ответ неправильный, правильный ответ: ${correctAnswers[question]}`;
+                feedbackElement.style.color = '#ff7777';
             }
         }
 
@@ -61,17 +62,15 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem('testResult', testResult);
     });
 
-    
     restartBtn.addEventListener('click', function() {
+       
         form.reset();
-        feedbackElements.forEach(feedback => feedback.textContent = ''); 
+        feedbackElements.forEach(feedback => feedback.textContent = '');
         resultContainer.style.display = 'none';
         restartBtn.style.display = 'none';
         submitBtn.style.display = 'inline-block'; 
     });
 });
-
-
 document.querySelector('.logout').addEventListener('click', function(event) {
     event.preventDefault();
     localStorage.clear();
