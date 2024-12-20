@@ -15,6 +15,13 @@ body {
     flex-direction: column; 
 }
 
+.error-message {
+    color: #ff6666;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none; 
+}
+
 #auth_div {
     display: flex;
     flex-direction: column; 
