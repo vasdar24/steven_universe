@@ -1,24 +1,31 @@
 let currentSlide = 0;
+const slides = document.querySelectorAll('.gallery-slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-function moveSlide(step) {
-    const slides = document.querySelectorAll('.gallery-slide');
-    const totalSlides = slides.length;
+function updateSlide() {
+    
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector('.gallery-slides').style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 
-    currentSlide += step;
-
-    if (currentSlide < 0) {
-        currentSlide = 0; 
-    } else if (currentSlide >= totalSlides) {
-        currentSlide = totalSlides - 1; 
-    }
-
-    slides.forEach((slide, index) => {
-        slide.classList.remove('active');
-        if (index === currentSlide) {
-            slide.classList.add('active');
-        }
-    });
+    
+    prevBtn.disabled = currentSlide === 0;
+    nextBtn.disabled = currentSlide === slides.length - 1;
 }
+
+function moveSlide(direction) {
+    currentSlide += direction;
+    if (currentSlide < 0) {
+        currentSlide = 0;
+    } else if (currentSlide >= slides.length) {
+        currentSlide = slides.length - 1;
+    }
+    updateSlide();
+}
+
+
+updateSlide();
+
 document.querySelector('.logout').addEventListener('click', function(event) {
     event.preventDefault();
     localStorage.clear();
