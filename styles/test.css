@@ -155,7 +155,11 @@ body {
 }
 
 .test-form .feedback.correct {
+<<<<<<< HEAD
+    color: #95fdc0;
+=======
     color: #3e3;
+>>>>>>> 9d39c44e71b9171c1510437108a6326dc918879e
 }
 
 .test-form .feedback.incorrect {
